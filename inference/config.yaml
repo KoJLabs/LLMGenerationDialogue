@@ -1,0 +1,16 @@
+Task: Aug
+Experiment: Polyglot-AUG-DIALOGUE-Inferece
+data: 
+    data_path: ./inference_target.csv
+params:
+    inference_batch_size: 16
+    sample_size_per_topic: 200
+
+hyper_params: 
+    batch_size: 32
+    learning_rate: 0.000001
+    epochs: 3
+model:
+    pretrained_model_checkpoint: EleutherAI/polyglot-ko-12.8b
+    saved_adaptor_checkpoint: ./results/checkpoint-2500
+save_dir: ./results_inference

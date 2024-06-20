@@ -1,0 +1,15 @@
+Task: Aug
+Experiment: Polyglot-AUG-DIALOGUE-TRAIN
+seed: 42
+data: 
+    data_path: ./data.csv
+params:
+    sample_size_per_topic: 200
+
+hyper_params: 
+    batch_size: 32
+    learning_rate: 0.000001
+    epochs: 3
+model:
+    checkpoint: EleutherAI/polyglot-ko-12.8b
+    save_model_path: ./results
