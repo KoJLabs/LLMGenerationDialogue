@@ -4,6 +4,8 @@ import os
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from peft import PeftModel
 import torch
+import argparse
+
 from .utils import generate, train_sample_size
 import yaml
 
@@ -20,14 +22,6 @@ def read_config(config_path):
     print(config)
     return config
 
-
-# df = pd.read_csv("./data/remaining_data.csv")
-
-# inference_batch_size = 16
-
-# model_name = "polyglot12_8B"
-# model = AutoModelForCausalLM.from_pretrained("EleutherAI/polyglot-ko-12.8b")
-# tokenizer = AutoTokenizer.from_pretrained('EleutherAI/polyglot-ko-12.8b')
 
 def main(config):
     df = pd.read_csv(config['data']['data_path'])
